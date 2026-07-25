@@ -94,20 +94,7 @@ In ARIMA(2,1,2), the MA(2) coefficient had |coefficient| < standard error (t-sta
 
 ---
 
-## Fixes Applied to Original Script
 
-| # | Issue | Fix |
-|---|---|---|
-| 1 | `setwd("D:/zahra/...")` hardcoded Windows path | Removed — use `setwd()` to the repo root |
-| 2 | `choose.files()` interactive file picker | Replaced with `read.csv("index_1.csv", ...)` |
-| 3 | **ADF comment: "p > 0.05, we reject H0"** — wrong | Fixed: p > 0.05 = **FAIL TO REJECT H0** → non-stationary |
-| 4 | CI multiplier `0.69` for "50% CI" (gives ~51%) | Fixed to `0.6745` (exact 50% CI z-score) |
-| 5 | No `par(mfrow=c(1,1))` reset after multi-plot blocks | Added resets throughout |
-| 6 | NA state label unlabelled in legend | Added explicit "No Purchase" label |
-| 7 | `install.packages()` inside script | Moved to safe `if (!requireNamespace(...))` pattern |
-| 8 | Forecast table not printed — only plot shown | Added formatted `forecast_table` printout |
-
----
 
 ## New Skills Demonstrated in This Project
 
